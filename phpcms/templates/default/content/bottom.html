@@ -1,0 +1,12 @@
+<div class="sl9-ib-c pc1">
+<div class="sl9-ib-ca"><span>常见问题</span><a href="/html/wuxiaoxinwen/">查看更多>></a></div>
+<div class="sl9-ib-cb"><img src="/statics/edu/images/p08.jpg" /></div>
+<ul>
+{pc:content  action="hits" catid="11" num="6" order="views DESC" cache="3600"}     
+{loop $data $r}   
+<li><a href="{$r['url']}">{$r['title']}</a><span>{date('Y-m-d',$r[inputtime])}</span></li>
+{/loop}
+{/pc}
+
+</ul>
+</div>

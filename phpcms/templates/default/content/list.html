@@ -1,0 +1,45 @@
+{template "content","header"}
+<div class="sl9-i">
+<!--left-->
+{template "content","left"}
+<!--left-->
+<div class="sl9-ib">
+  <h2>{$catname}</h2>
+<div class="sl9-ib-b">
+
+<div class="m_zxc">
+{pc:content action="lists" catid="$catid" num="15" order="id DESC" page="$page"}
+{loop $data $r}
+<dl>
+                    <dt><a href="{$r[url]}" target="_blank" se_prerender_url="complete" title="{$r[title]}">{$r[title]}</a></dt>
+                    <dd>{$r[description]}</dd>
+                </dl>
+{/loop}
+{/pc}
+</div>
+
+<div class="pages">
+
+     
+ {$pages}
+
+</div>
+
+
+
+
+</div>
+<!--bottom-->
+{template "content","bottom"}
+<!--bottom-->
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--bottom2-->
+{template "content","bottom2"}
+<!--bottom-->
+<!--footer-->
+{template "content","footer"}
+</body>
+</html>

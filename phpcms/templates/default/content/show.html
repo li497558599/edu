@@ -1,0 +1,38 @@
+{template "content","header3"}
+<div class="sl9-i">
+<!--left-->
+{template "content","left"}
+<!--left-->
+<div class="sl9-ib">
+<div class="sl9-ib-b">
+<div class="modBoxA">
+<h2>{$title}</h2>
+<div class="artInfo">时间：{$inputtime}&nbsp;&nbsp; 点击：<span id="hits"><script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script> </span></div>
+<div class="artCon" >
+{$content}
+</div>
+</div>
+<div class="article-turn">
+            <ul>
+                <li>上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a> </li>
+                <li>下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a></li>
+            </ul>
+        </div>
+
+
+
+</div>
+<!--bottom-->
+{template "content","bottom"}
+<!--bottom-->
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--bottom2-->
+{template "content","bottom2"}
+<!--bottom-->
+<!--footer-->
+{template "content","footer"}
+</body>
+</html>

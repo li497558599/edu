@@ -1,0 +1,46 @@
+{template "content","header"}
+<div class="sl9-i">
+<!--left-->
+{template "content","left"}
+<!--left-->
+<div class="sl9-ib">
+  <h2>{$catname}</h2>
+<div class="sl9-ib-b">
+
+<div class="list2">		  
+     <ul style="padding-left: 8px;">
+     
+     {pc:content action="lists" catid="$catid" num="9" order="id DESC" page="$page"}
+{loop $data $r}
+<li><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],137,100)}" alt="{$r[title]}"></a>
+            <h2><a href="{$r[url]}" target="_blank">{$r[title]}</a></h2>
+          </li>
+  {/loop}
+  
+ {/pc}
+          </ul>
+          </div>
+
+
+
+<div class="pages">
+
+     
+{$pages}
+
+</div>
+</div>
+<!--bottom-->
+{template "content","bottom"}
+<!--bottom-->
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--bottom2-->
+{template "content","bottom2"}
+<!--bottom-->
+<!--footer-->
+{template "content","footer"}
+</body>
+</html>
